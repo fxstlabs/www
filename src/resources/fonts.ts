@@ -1,4 +1,4 @@
-import {DM_Serif_Display, JetBrains_Mono, Noto_Sans, Noto_Serif} from "next/font/google";
+import {DM_Serif_Display, JetBrains_Mono, Inter, EB_Garamond, Merriweather} from "next/font/google";
 
 export const fontDisplayDefault = DM_Serif_Display({
     variable: "--font-display",
@@ -6,12 +6,12 @@ export const fontDisplayDefault = DM_Serif_Display({
     subsets: ["latin"],
 });
 
-export const fontSerifDefault = Noto_Serif({
+export const fontSerifDefault = EB_Garamond({
     variable: "--font-serif",
     subsets: ["latin"],
 });
 
-export const fontSansDefault = Noto_Sans({
+export const fontSansDefault = Inter({
     variable: "--font-sans",
     subsets: ["latin"],
 });
