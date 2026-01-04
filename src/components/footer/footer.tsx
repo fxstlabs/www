@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import {siGithub, siInstagram} from "simple-icons";
+import Image from "next/image";
 
 const footerColumns: ({
     title: string;
@@ -68,13 +69,14 @@ export default function Footer() {
                     </p>
 
                     {/* Socials */}
-                    <div className="flex space-x-6">
+                    <div className="flex space-x-6 items-center">
                         {socialLinks.map((item) => (
                             <Link key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">{item.name}</span>
-                                <img height="32" width="32" src={`https://cdn.simpleicons.org/${item.icon.slug}/FFFFFF`} />
+                                <img alt={`${item.name} logo`} height="32" width="32" src={`https://cdn.simpleicons.org/${item.icon.slug}/FFFFFF`} />
                             </Link>
                         ))}
+                        <Link className='text-sm text-neutral-400' href={"https://linkedin.com/company/fxst"}> LinkedIn </Link>
                     </div>
                 </div>
             </div>
