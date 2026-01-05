@@ -1,26 +1,15 @@
 "use client";
 
-import NavigationBar from "@/components/navigation-bar/navigation-bar";
-import Footer from "@/components/footer/footer";
 import MainHero from "@/app/main/hero";
+import SimplePageTemplate from "@/components/templates/general-presentation";
 import MainAboutSection from "@/app/main/about";
+import MainServices from "@/app/main/services";
+import React from "react";
 
 export default function Home() {
-    return (
-        <main className="flex flex-col min-h-screen">
-            <NavigationBar
-                logoVariant="light"
-                navVariant="light"
-                enableScrollBackground={true}
-            />
-
-            <div className="relative">
-                <MainHero/>
-            </div>
-
-            <MainAboutSection/>
-            {/* <MainServices /> */}
-            <Footer/>
-        </main>
-    );
+    return <SimplePageTemplate hero={<MainHero/>}>
+        <MainAboutSection/>
+        <div className="mx-32 border-t border-persistent-foreground/20 my-8"></div>
+        <MainServices/>
+    </SimplePageTemplate>
 }

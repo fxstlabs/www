@@ -1,9 +1,9 @@
 "use client";
 
-import ComingSoonPage from "@/components/placeholders/coming-soon";
+import ComingSoonTemplate from "@/components/templates/coming-soon";
 
 export default function CncMachiningHome() {
-    return ComingSoonPage({
+    return ComingSoonTemplate({
         href: "/services/manufacturing",
         image: "/images/pages/services/manufacturing/cnc-machining/main-cover.jpg"
     })

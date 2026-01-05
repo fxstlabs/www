@@ -1,9 +1,9 @@
 "use client";
 
-import ComingSoonPage from "@/components/placeholders/coming-soon";
+import ComingSoonTemplate from "@/components/templates/coming-soon";
 
 export default function AutomationHome() {
-    return ComingSoonPage({
+    return ComingSoonTemplate({
         href: "/services",
         image: "/images/pages/services/automation/main-cover.jpg"
     })

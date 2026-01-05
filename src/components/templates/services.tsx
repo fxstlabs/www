@@ -18,7 +18,7 @@ export function ServiceCard({
     return (
         <a
             href={href}
-            className="group relative overflow-hidden rounded-2xl bg-stone-200 shadow-lg ring-1 ring-stone-200/50 transition-all duration-500 hover:shadow-2xl hover:ring-stone-300 hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl bg-secondary shadow-md shadow-shadow transition-all duration-500 hover:shadow-2xl hover:ring-border hover:-translate-y-1"
         >
             {/* Image Section */}
             <div className="relative h-56 lg:h-64 overflow-hidden">
@@ -42,18 +42,18 @@ export function ServiceCard({
             {/* Content Section */}
             <div className="p-6 lg:p-8">
                 {!showTitleOnImage && (
-                    <h3 className="text-xl font-bold text-stone-900 mb-3">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">
                         {title}
                     </h3>
                 )}
 
-                <p className="text-base text-stone-600 leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                     {description}
                 </p>
 
                 {/* Arrow indicator */}
                 <div
-                    className="mt-4 flex items-center text-stone-900 font-medium group-hover:text-stone-700 transition-colors">
+                    className="mt-4 flex items-center text-foreground font-medium group-hover:opacity-80 transition-opacity">
                     <span>Learn more</span>
                     <svg
                         className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -93,13 +93,13 @@ export function ServicesGrid({
     const containerClass = maxWidth === 'wide' ? 'max-w-[1400px]' : 'max-w-7xl';
 
     return (
-        <section className="py-10 lg:py-12 bg-stone-200" id="services">
+        <section className="py-10 lg:py-12 bg-background" id="services">
             <div className={`mx-auto ${containerClass} px-8 lg:px-12`}>
 
                 {/* Description */}
                 {description && (
                     <div className="text-center mb-12">
-                        <p className="text-lg text-stone-600 max-w-3xl mx-auto">
+                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                             {description}
                         </p>
                     </div>

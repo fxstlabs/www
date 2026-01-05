@@ -1,33 +1,18 @@
-import Image from "next/image";
+import HeroTemplate from "@/components/templates/hero-template";
 
-export default function ManufacturingHero() {
+export default function MainHero() {
     return (
-        <div className="relative isolate grow flex items-center justify-center overflow-hidden py-24 sm:py-32">
-
-            {/* Background Image */}
-            <Image
-                src="/images/pages/main/manufacturing-cover.jpg"
-                alt="3D Printer in operation"
-                fill
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
-                priority
-            />
-
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 -z-10 bg-black/70" />
-
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-                <div className="mx-auto max-w-2xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
-                        Professional Manufacturing Services
-                    </h1>
-                </div>
-            </div>
-
-            {/* Attribution */}
-            <div className="absolute bottom-4 left-4 text-xs text-gray-400">
-                Photo by <a href="https://unsplash.com/@albertstoynov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" className="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Albert Stoynov</a> on <a href="https://unsplash.com/photos/close-up-of-a-3d-printer-head-in-operation-gUSN0c1Big8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" className="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Unsplash</a>
-            </div>
-        </div>
+        <HeroTemplate
+            title="Professional Manufacturing Services"
+            description="From concept to production. We offer comprehensive manufacturing solutions tailored to your project needs."
+            imageSrc="/images/pages/services/manufacturing/main-cover.jpg"
+            imageAlt="3D Printer in operation"
+            attribution={{
+                photographer: "Albert Stoynov",
+                photographerUrl: "https://unsplash.com/@albertstoynov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+                sourceUrl: "https://unsplash.com/photos/close-up-of-a-3d-printer-head-in-operation-gUSN0c1Big8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            }}
+            fullHeight={false}
+        />
     );
 }

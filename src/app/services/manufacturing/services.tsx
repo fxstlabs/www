@@ -1,4 +1,4 @@
-import {ServicesGrid} from "@/components/services";
+import {ServicesGrid} from "@/components/templates/services";
 
 export function ManufacturingServices() {
     const services = [
@@ -34,12 +34,9 @@ export function ManufacturingServices() {
         }
     ];
 
-    const description = "From concept to production. We offer comprehensive manufacturing solutions tailored to your project needs. By using state-of-the-art equipment operated by an experienced team, we ensure precision and quality in every part we produce.";
-
     return (
         <ServicesGrid
             services={services}
-            description={description}
             showTitleOnImage={false}
             maxWidth="default"
         />

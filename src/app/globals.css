@@ -1,33 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: var(--color-neutral-800);
-  --foreground: var(--color-black);
+    --background: var(--color-zinc-200);
+    --foreground: var(--color-zinc-800);
+
+    --muted-foreground: var(--color-zinc-600);
+
+    --border: var(--color-zinc-300);
+
+    --primary: var(--color-zinc-100);
+    --primary-foreground: var(--color-zinc-800);
+
+    --complement: var(--color-zinc-800);
+    --complement-foreground: var(--color-zinc-200);
+
+    --shadow: var(--color-zinc-700);
+
+    --persistent-background: var(--color-zinc-300);
+    --persistent-foreground: var(--color-zinc-800);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--color-zinc-900);
+        --foreground: var(--color-zinc-200);
+
+        --muted-foreground: var(--color-zinc-400);
+
+        --border: var(--color-zinc-800);
+
+        --primary: var(--color-zinc-950);
+        --primary-foreground: var(--color-zinc-200);
+
+        --complement: var(--color-zinc-300);
+        --complement-foreground: var(--color-zinc-800);
+
+        --shadow: var(--color-zinc-950);
+
+        --persistent-background: var(--color-zinc-950);
+        --persistent-foreground: var(--color-zinc-200);
+    }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-display: var(--font-display);
-  --font-serif: DM Serif Display, serif;
-  --font-sans: InterVariable, sans-serif;
-  --font-mono: JetBrains Mono, monospace;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-border: var(--border);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-complement: var(--complement);
+    --color-complement-foreground: var(--complement-foreground);
+
+    --color-shadow: var(--shadow);
+
+    --color-persistent-background: var(--persistent-background);
+    --color-persistent-foreground: var(--persistent-foreground);
+
+    --color-always-light: var(--color-zinc-300);
+    --color-always-dark: var(--color-zinc-800);
+
+    --color-always-middle: var(--color-zinc-500);
+
+    --font-display: var(--font-display);
+    --font-serif: DM Serif Display, serif;
+    --font-sans: InterVariable, sans-serif;
+    --font-mono: JetBrains Mono, monospace;
 }
 
-/*@media (prefers-color-scheme: dark) {*/
-/*  :root {*/
-/*    --background: var(--color-stone-500);*/
-/*    --foreground: var(--color-stone-100);*/
-/*  }*/
-/*}*/
-
 html {
-  --scroll-behavior: smooth;
-  scroll-behavior: smooth;
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }

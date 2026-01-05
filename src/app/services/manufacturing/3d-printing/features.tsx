@@ -29,7 +29,7 @@ export default function TDPrintingFeatures() {
     ];
 
     return (
-        <div className="bg-stone-200" id="features">
+        <div className="bg-background" id="features">
             <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20 min-h-screen flex items-center">
 
                 {/* Main Content Grid */}
@@ -39,10 +39,10 @@ export default function TDPrintingFeatures() {
                     <div className="space-y-8">
                         {/* Header */}
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-stone-800 sm:text-4xl lg:text-5xl font-display">
+                            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl font-display">
                                 Everything you need to bring your ideas to life
                             </h2>
-                            <p className="mt-5 text-base lg:text-lg leading-7 text-stone-600">
+                            <p className="mt-5 text-base lg:text-lg leading-7 text-muted-foreground">
                                 From hobbyist projects to industrial prototypes, we provide the tools and expertise to
                                 get the job done right.
                             </p>
@@ -53,7 +53,7 @@ export default function TDPrintingFeatures() {
                             {features.map((feature) => (
                                 <div
                                     key={feature.name}
-                                    className="group relative overflow-hidden rounded-2xl bg-stone-100 p-5 shadow-sm ring-1 ring-stone-200/50 transition-all duration-300 hover:shadow-lg hover:ring-stone-300 hover:-translate-y-1"
+                                    className="group relative overflow-hidden rounded-2xl bg-card p-5 shadow-sm ring-1 ring-border transition-all duration-300 hover:shadow-lg hover:ring-border hover:-translate-y-1"
                                 >
                                     <div className="flex items-start gap-4">
                                         <div
@@ -61,10 +61,10 @@ export default function TDPrintingFeatures() {
                                             <feature.icon className="h-5 w-5 text-white"/>
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-lg font-bold text-stone-800 mb-1.5">
+                                            <h3 className="text-lg font-bold text-card-foreground mb-1.5">
                                                 {feature.name}
                                             </h3>
-                                            <p className="text-sm text-stone-600 leading-relaxed">
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
                                                 {feature.description}
                                             </p>
                                         </div>
@@ -72,7 +72,7 @@ export default function TDPrintingFeatures() {
 
                                     {/* Hover effect shii */}
                                     <div
-                                        className="absolute bottom-0 left-0 h-1 w-full bg-linear-to-r from-transparent via-stone-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                                        className="absolute bottom-0 left-0 h-1 w-full bg-linear-to-r from-transparent via-border to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                                 </div>
                             ))}
 
@@ -80,7 +80,7 @@ export default function TDPrintingFeatures() {
                             <div className="pt-2">
                                 <a
                                     href="/docs/services/3d-printing"
-                                    className="inline-flex items-center gap-2 rounded-xl bg-stone-900 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-stone-800 hover:shadow-xl hover:scale-105"
+                                    className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-secondary-foreground shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl hover:scale-105"
                                 >
                                     Get a Quote
                                     <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none"
@@ -95,14 +95,14 @@ export default function TDPrintingFeatures() {
 
                     {/* Image */}
                     <div
-                        className="relative aspect-square lg:aspect-auto lg:h-150 overflow-hidden rounded-3xl shadow-2xl ring-1 ring-stone-200/50">
+                        className="relative aspect-square lg:aspect-auto lg:h-150 overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
                         <img
                             src="/images/pages/services/manufacturing/3d-printing/creality-printer-with-prints.jpg"
                             alt="3D printer in action showing intricate parts"
                             className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                         />
                         <div
-                            className="absolute inset-0 bg-linear-to-t from-stone-900/60 via-transparent to-transparent"/>
+                            className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"/>
 
                         {/* Attribution */}
                         <div

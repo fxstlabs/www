@@ -1,4 +1,4 @@
-import {ServicesGrid} from "@/components/services";
+import {ServicesGrid} from "@/components/templates/services";
 
 export function ServicesDisplay() {
     const services = [
@@ -34,12 +34,9 @@ export function ServicesDisplay() {
         },
     ];
 
-    const description = "We offer a comprehensive range of services to help you thrive in a rapidly evolving landscape.";
-
     return (
         <ServicesGrid
             services={services}
-            description={description}
             showTitleOnImage={true}
             maxWidth="wide"
         />

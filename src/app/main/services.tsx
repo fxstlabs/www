@@ -1,109 +1,92 @@
-export default function MainServices() {
-  const services = [
-    {
-      title: "Manufacturing",
-      href: "services/manufacturing",
-      description: "High-quality manufacturing tailored to your needs.",
-      image: "/images/pages/services/manufacturing/main-cover.jpg",
-      className: "lg:col-span-2 lg:row-span-2",
-      gradient: "from-blue-500/80 to-purple-600/80"
-    },
-    {
-      title: "Automation",
-      href: "services/automation",
-      description: "Streamline your operations with our cutting-edge automation tools.",
-      image: "/images/pages/services/automation/main-cover.jpg",
-      className: "lg:col-span-1 lg:row-span-1",
-      gradient: "from-pink-500/80 to-rose-600/80"
-    },
-    {
-      title: "Software",
-      href: "services/software",
-      description: "User-centric software to power your creativity.",
-      image: "/images/pages/services/software/main-cover.jpg",
-      className: "lg:col-span-1 lg:row-span-1",
-      gradient: "from-cyan-500/80 to-blue-600/80"
-    },
-    {
-      title: "Quality and Process Control",
-      href: "services/quality-control",
-      description: "Ensuring excellence and consistency in every step of your process.",
-      image: "/images/pages/services/quality-control/main-cover.jpg",
-      className: "lg:col-span-1 lg:row-span-1",
-      gradient: "from-emerald-500/80 to-teal-600/80"
-    },
-    {
-      title: "Education",
-      href: "services/education",
-      description: "Empowering you and your team with the knowledge and skills to succeed.",
-      image: "/images/pages/services/education/main-cover.jpg",
-      className: "lg:col-span-2 lg:row-span-1",
-      gradient: "from-amber-500/80 to-orange-600/80"
-    },
-  ];
+import {CheckCircle, Code, Cog, GraduationCap, Wrench} from "lucide-react";
 
-  return (
-      <div className="bg-stone-300" id="services">
-        {/* Services Bento Grid */}
+export default function HowWeDoItSection() {
+    const methods = [
+        {
+            icon: Wrench,
+            title: "Manufacturing Made Simple",
+            description: "Access comprehensive guides, templates, and tools that demystify the production process. From prototyping to scaling, without expensive consultants or locked resources."
+        },
+        {
+            icon: GraduationCap,
+            title: "Knowledge Without Barriers",
+            description: "Learn at your own pace with our open educational resources. No paywalls, no gatekeeping; just clear, actionable knowledge that grows with your needs."
+        },
+        {
+            icon: Cog,
+            title: "Automation Simplified",
+            description: "Streamline repetitive tasks with ready-to-use automation frameworks. Spend less time on busywork and more time on innovation."
+        },
+        {
+            icon: Code,
+            title: "Software Foundations",
+            description: "Build on battle-tested, open-source software tools designed for creators. No vendor lock-in, no licensing nightmares; just reliable infrastructure."
+        },
+        {
+            icon: CheckCircle,
+            title: "Quality Control Clarity",
+            description: "Implement robust quality systems with our transparent frameworks and checklists. Maintain high standards without the complexity."
+        }
+    ];
 
-        <section className="py-16 lg:py-20 bg-stone-200 min-h-screen flex flex-col justify-center">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            {/* Header */}
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl font-display">
-                Our Services
-              </h2>
-              <p className="mt-4 text-base lg:text-lg leading-7 text-stone-600">
-                We offer a comprehensive range of services to help your business thrive in a rapidly evolving landscape.
-              </p>
-            </div>
-
-            {/* Bento Grid */}
-            <div className="mx-auto mt-10 lg:mt-12 grid max-w-2xl grid-cols-1 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:grid-rows-2" style={{ maxHeight: '600px' }}>
-              {services.map((service) => (
-                  <div
-                      key={service.title}
-                      className={`relative group overflow-hidden rounded-2xl shadow-lg ring-1 ring-stone-200/50 transition-all duration-500 hover:shadow-2xl hover:ring-stone-300 ${service.className}`}
-                  >
-                    {/* Background Image */}
-                    <div className="absolute inset-0 z-0">
-                      <img
-                          src={service.image}
-                          alt={service.title}
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-60 group-hover:opacity-70 transition-opacity duration-500`} />
-                      <div className="absolute inset-0 bg-black/20" />
+    return (
+        <div className="bg-background min-h-screen" id="methods">
+            <section className="py-24 sm:py-32">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    {/* Header */}
+                    <div className="mx-auto max-w-2xl text-center mb-16">
+                        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-display">
+                            How We Do It
+                        </h2>
+                        <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                            We remove the obstacles between you and your goals with five core approaches that put
+                            powerful capabilities in your hands.
+                        </p>
                     </div>
 
-                    {/* Content */}
-                    <a href={service.href}>
-                      <div className="relative z-10 flex flex-col h-full justify-end p-6 lg:p-8">
-                        <div className="transform transition-transform duration-300 group-hover:-translate-y-1">
-                          <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight font-display">
-                            {service.title}
-                          </h3>
-                          <p className="mt-2 text-sm lg:text-base text-white/95 leading-relaxed">
-                            {service.description}
-                          </p>
+                    {/* Methods Grid */}
+                    <div className="mx-auto max-w-5xl">
+                        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-12">
+                            {methods.map((method, index) => {
+                                const Icon = method.icon;
+                                return (
+                                    <div
+                                        key={index}
+                                        className="relative group"
+                                    >
+                                        <div className="flex items-start gap-4">
+                                            <div className="shrink-0">
+                                                <div
+                                                    className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary">
+                                                    <Icon className="h-6 w-6 text-primary-foreground"/>
+                                                </div>
+                                            </div>
+                                            <div className="flex-1">
+                                                <h3 className="text-xl font-bold text-foreground font-display mb-2">
+                                                    {method.title}
+                                                </h3>
+                                                <p className="text-base leading-7 text-muted-foreground">
+                                                    {method.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
+                    </div>
 
-                        {/* Hover Arrow */}
-                        <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="inline-flex items-center text-white text-sm font-medium">
-                        Learn more
-                        <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-  );
+                    {/* CTA */}
+                    <div className="mt-12 text-center">
+                        <a
+                            href="/services"
+                            className="inline-flex items-center px-6 py-3 text-base font-semibold text-primary-foreground bg-primary rounded-lg hover:opacity-90 transition-colors shadow-sm hover:shadow-md"
+                        >
+                            Explore Our Services
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
 }
