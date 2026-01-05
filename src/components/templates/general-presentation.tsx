@@ -13,8 +13,6 @@ export default function SimplePageTemplate({hero, children}: PageLayoutProps) {
     return (
         <main className="flex flex-col min-h-screen">
             <NavigationBar
-                logoVariant="light"
-                navVariant="light"
                 enableScrollBackground={true}
             />
 
