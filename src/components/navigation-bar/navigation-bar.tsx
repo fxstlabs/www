@@ -11,50 +11,55 @@ const navItems = [
 
 interface NavigationBarProps {
     enableScrollBackground?: boolean;
-    forceTheme?: 'light' | 'dark';
+    logoOnSurface?: boolean;
 }
 
 export default function NavigationBar({
                                           enableScrollBackground = true,
-                                          forceTheme
+                                          logoOnSurface = false,
                                       }: NavigationBarProps) {
     const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
-        if (!enableScrollBackground) return;
-
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            setScrolled(scrollPosition > 50);
+
+            if (enableScrollBackground) {
+                setScrolled(scrollPosition > 50);
+            }
+
+            if (scrollPosition > lastScrollY && scrollPosition > 100) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+
+            setLastScrollY(scrollPosition);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, {passive: true});
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [enableScrollBackground]);
+    }, [enableScrollBackground, lastScrollY]);
 
     const getColors = () => {
-        if (forceTheme === 'dark') {
+        if (logoOnSurface) {
             return {
-                text: 'text-always-white',
+                text: 'text-on-surface',
                 bg: 'bg-transparent'
-            };
-        }
-        if (forceTheme === 'light') {
-            return {
-                text: 'text-persistent-foreground',
-                bg: 'bg-persistent-background backdrop-blur-md shadow-lg'
             };
         }
 
         if (scrolled) {
             return {
-                text: 'text-persistent-foreground',
-                bg: 'bg-persistent-background backdrop-blur-md shadow-lg'
+                text: 'text-on-surface',
+                bg: 'bg-surface-container shadow-md shadow-shadow'
             };
         }
 
         return {
-            text: 'text-always-light',
+            text: 'text-primary-fixed',
             bg: 'bg-transparent'
         };
     };
@@ -62,7 +67,8 @@ export default function NavigationBar({
     const colors = getColors();
 
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${colors.bg}`}>
+        <header
+            className={`fixed top-0 w-full z-50 transition-all duration-300 ${colors.bg} ${hidden ? '-translate-y-full' : 'translate-y-0'}`}>
             <nav className="mx-auto flex min-w-full items-center justify-between py-3 px-4 lg:px-8" aria-label="Global">
 
                 {/* Logo */}

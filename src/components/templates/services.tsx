@@ -18,7 +18,7 @@ export function ServiceCard({
     return (
         <a
             href={href}
-            className="group relative overflow-hidden rounded-2xl bg-secondary shadow-md shadow-shadow transition-all duration-500 hover:shadow-2xl hover:ring-border hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl bg-surface-container shadow-md shadow-shadow transition-all duration-500 hover:shadow-2xl hover:ring-outline hover:-translate-y-1"
         >
             {/* Image Section */}
             <div className="relative h-56 lg:h-64 overflow-hidden">
@@ -28,32 +28,21 @@ export function ServiceCard({
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40"/>
-
-                {/* Title on Image */}
-                {showTitleOnImage && (
-                    <div className="absolute inset-0 flex items-end p-6">
-                        <h2 className="text-2xl lg:text-3xl font-bold text-white font-display">
-                            {title}
-                        </h2>
-                    </div>
-                )}
             </div>
 
             {/* Content Section */}
             <div className="p-6 lg:p-8">
-                {!showTitleOnImage && (
-                    <h3 className="text-xl font-bold text-card-foreground mb-3">
-                        {title}
-                    </h3>
-                )}
+                <h3 className="text-xl font-bold text-on-surface mb-3 font-display">
+                    {title}
+                </h3>
 
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-base text-on-surface-variant leading-relaxed">
                     {description}
                 </p>
 
                 {/* Arrow indicator */}
                 <div
-                    className="mt-4 flex items-center text-foreground font-medium group-hover:opacity-80 transition-opacity">
+                    className="mt-4 flex items-center text-on-surface-variant font-medium group-hover:opacity-80 transition-opacity">
                     <span>Learn more</span>
                     <svg
                         className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -99,7 +88,7 @@ export function ServicesGrid({
                 {/* Description */}
                 {description && (
                     <div className="text-center mb-12">
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                        <p className="text-lg text-on-surface-variant max-w-3xl mx-auto">
                             {description}
                         </p>
                     </div>

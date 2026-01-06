@@ -65,10 +65,10 @@ export default function HeroTemplate({
 
             <div className={`max-w-7xl px-6 lg:px-8 ${leftAligned ? "text-left mx-16" : "mx-auto text-center"}`}>
                 <div className={`max-w-2xl ${leftAligned ? "" : "mx-auto"}`}>
-                    <h1 className="text-4xl font-bold tracking-tight text-always-light sm:text-6xl font-display">
+                    <h1 className="text-4xl font-bold tracking-tight text-primary-fixed sm:text-6xl font-display">
                         {title}
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-always-light">
+                    <p className="mt-6 text-lg leading-8 text-secondary-fixed">
                         {description}
                     </p>
                     {(primaryButton || secondaryButton) && (
@@ -78,14 +78,14 @@ export default function HeroTemplate({
                             {primaryButton && (
                                 <Link
                                     href={primaryButton.href}
-                                    className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                    className="rounded-md bg-on-secondary-fixed px-3.5 py-2.5 text-sm font-semibold text-secondary-fixed shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
                                 >
                                     {primaryButton.text}
                                 </Link>
                             )}
                             {secondaryButton && (
                                 <Link href={secondaryButton.href}
-                                      className="text-sm font-semibold leading-6 text-always-light">
+                                      className="text-sm font-semibold leading-6 text-secondary-fixed">
                                     <div className='flex flex-row'>
                                         <p> {secondaryButton.text} </p>
                                     </div>

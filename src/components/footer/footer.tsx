@@ -36,7 +36,7 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-persistent-background text-persistent-foreground py-12">
+        <footer className="bg-surface-container text-on-surface py-12">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Columns */}
@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-persistent-foreground/20 my-8"></div>
+                <div className="border-t border-outline-variant/30 my-8"></div>
 
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -78,7 +78,7 @@ export default function Footer() {
                                      src={`https://cdn.simpleicons.org/${item.icon.slug}/79716b`}/>
                             </Link>
                         ))}
-                        <Link className='text-sm text-persistent-foreground opacity-70'
+                        <Link className='text-sm text-on-surface opacity-70 hover:opacity-100 transition-opacity'
                               href={"https://linkedin.com/company/fxst"}> LinkedIn </Link>
                     </div>
                 </div>

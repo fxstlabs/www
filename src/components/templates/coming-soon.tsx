@@ -16,14 +16,14 @@ export function ComingSoonBase(
             {/* Content */}
             <div className="flex items-center justify-center bg-background px-6 py-16 lg:px-12">
                 <div className="max-w-xl">
-                    <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl font-display">
+                    <h1 className="text-5xl font-bold tracking-tight text-on-surface sm:text-6xl lg:text-7xl font-display">
                         Coming Soon!
                     </h1>
-                    <p className="mt-6 text-lg lg:text-xl leading-8 text-muted-foreground">
+                    <p className="mt-6 text-lg lg:text-xl leading-8 text-on-surface">
                         We&apos;re working hard to bring you something amazing. This page is currently under
                         construction, but great things are on the way.
                     </p>
-                    <p className="mt-4 text-base text-muted-foreground opacity-80">
+                    <p className="mt-4 text-base text-on-surface-variant opacity-80">
                         Please be patient, as FXST is relatively new!
                     </p>
 
@@ -31,7 +31,7 @@ export function ComingSoonBase(
                     <div className="mt-10">
                         <Link
                             href={href}
-                            className="inline-flex items-center gap-3 px-6 py-3 text-base font-semibold text-primary-foreground bg-primary rounded-lg hover:opacity-90 transition-colors shadow-sm hover:shadow-md"
+                            className="inline-flex items-center gap-3 px-6 py-3 text-base font-semibold text-on-primary bg-primary rounded-lg hover:opacity-90 transition-colors shadow-sm hover:shadow-md"
                         >
                             <ArrowLeft className="h-5 w-5"/>
                             Go Back

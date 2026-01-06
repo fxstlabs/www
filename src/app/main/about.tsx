@@ -10,42 +10,43 @@ export default function MainAboutSection() {
                         {/* Content */}
                         <div>
                             <div className="max-w-2xl">
-                                <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-display">
+                                <h2 className="text-4xl font-bold tracking-tight text-on-surface sm:text-5xl font-display">
                                     Empowering Creators.<br/>Eliminating Friction.
                                 </h2>
-                                <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                                <p className="mt-6 text-lg leading-8 text-on-surface-variant">
                                     We provide a comprehensive ecosystem of open-source, cutting-edge tools designed
-                                    to
-                                    bridge the gap between imagination and reality.
+                                    to eliminate the technical and administrative friction that slows down your
+                                    creative process, saving you time, money and frustration.
                                 </p>
-                                <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                                    We eliminate technical and administrative friction so you can maintain momentum and
-                                    focus on what you do best: building the future.
+                                <p className="mt-4 text-lg leading-8 text-on-surface-variant">
+                                    From automating sales quotes to multidisciplinary product manufacturing: we take
+                                    care of the boring stuff so you can maintain your momentum and work on building
+                                    the future.
                                 </p>
                             </div>
 
                             <div className="mt-16 space-y-10">
-                                <div className="border-l-2 border-foreground pl-6">
+                                <div className="border-l-2 border-outline pl-6">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <Target className="h-5 w-5 text-foreground"/>
-                                        <h3 className="text-xl font-bold text-foreground font-display">Our
+                                        <Target className="h-5 w-5 text-on-surface"/>
+                                        <h3 className="text-xl font-bold text-on-surface font-display">Our
                                             Mission</h3>
                                     </div>
-                                    <p className="text-base leading-7 text-muted-foreground">
-                                        To empower creators by dismantling technical barriers and providing the tools
-                                        needed to turn complex challenges into unstoppable momentum.
+                                    <p className="text-base leading-7 text-on-surface-variant">
+                                        To provide creators with a framework of tools and processes that eliminates the
+                                        need for an advanced technical or administrative foundation to grow and develop
+                                        their ideas.
                                     </p>
                                 </div>
 
-                                <div className="border-l-2 border-foreground pl-6">
+                                <div className="border-l-2 border-outline pl-6">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <Eye className="h-5 w-5 text-foreground"/>
-                                        <h3 className="text-xl font-bold text-foreground font-display">Our Vision</h3>
+                                        <Eye className="h-5 w-5 text-on-surface"/>
+                                        <h3 className="text-xl font-bold text-on-surface font-display">Our Vision</h3>
                                     </div>
-                                    <p className="text-base leading-7 text-muted-foreground">
-                                        A world where technology is an invisible partner in the creative process,
-                                        turning every idea into a reality through limitless innovation and sustainable
-                                        growth.
+                                    <p className="text-base leading-7 text-on-surface-variant">
+                                        A world where technical complexity and administrative bureaucracy does not
+                                        deter creators from developing their ideas.
                                     </p>
                                 </div>
                             </div>
@@ -54,7 +55,7 @@ export default function MainAboutSection() {
                             <div className="mt-10">
                                 <a
                                     href="#methods"
-                                    className="inline-flex items-center px-6 py-3 text-base font-semibold text-primary-foreground bg-primary rounded-lg hover:opacity-90 transition-colors shadow-sm hover:shadow-md"
+                                    className="inline-flex items-center px-6 py-3 text-base font-semibold text-on-primary bg-primary rounded-lg hover:opacity-90 transition-colors shadow-sm hover:shadow-md"
                                 >
                                     Cool! How?
                                 </a>
