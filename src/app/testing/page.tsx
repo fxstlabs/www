@@ -44,8 +44,10 @@ export default function UIKitDemo() {
                     <div className="flex flex-wrap gap-3">
                         <Button variant="primary">Primary Button</Button>
                         <Button variant="secondary">Secondary Button</Button>
-                        <Button variant="outline">Outline Button</Button>
-                        <Button variant="primary" icon={Heart}>With Icon</Button>
+                        <Button variant="tertiary">Tertiary Button</Button>
+                        <Button variant="primary_outlined" icon={Heart}>With Icon</Button>
+                        <Button variant="secondary_outlined" icon={Heart}>With Icon</Button>
+                        <Button variant="tertiary_outlined" icon={Heart}>With Icon</Button>
                     </div>
                 </section>
 

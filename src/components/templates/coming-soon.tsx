@@ -20,7 +20,7 @@ export function ComingSoonBase(
                         Coming Soon!
                     </h1>
                     <p className="mt-6 text-lg lg:text-xl leading-8 text-on-surface">
-                        We&apos;re working hard to bring you something amazing. This page is currently under
+                        We&apos;re working hard to bring you something amazing.<br/>This page is currently under
                         construction, but great things are on the way.
                     </p>
                     <p className="mt-4 text-base text-on-surface-variant opacity-80">

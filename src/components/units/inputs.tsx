@@ -27,7 +27,7 @@ export function SearchableDropdown({options, value, onChange, placeholder = 'Sel
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full px-4 py-2 bg-surface-container-low text-on-surface border border-outline rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors"
+                className="w-full px-4 py-2 bg-surface-container-low text-on-surface rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors"
             >
                 <span>{selected ? selected.label : placeholder}</span>
                 <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
@@ -40,17 +40,18 @@ export function SearchableDropdown({options, value, onChange, placeholder = 'Sel
                         onClick={() => setIsOpen(false)}
                     />
                     <div
-                        className="absolute z-20 mt-1 w-full bg-surface-container-high border border-outline rounded-lg shadow-lg overflow-hidden">
+                        className="absolute z-20 mt-1 w-full bg-surface-container-high rounded-lg shadow-lg overflow-hidden">
                         <div className="p-2 border-b border-outline">
                             <div className="relative">
-                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
-                                        size={16}/>
+                                <Search
+                                    className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+                                    size={16}/>
                                 <input
                                     type="text"
                                     value={search}
                                     onChange={(e) => setSearch(e.target.value)}
                                     placeholder="Search..."
-                                    className="w-full pl-9 pr-3 py-1.5 bg-surface border border-outline-variant rounded text-on-surface focus:outline-none focus:ring-2 focus:ring-primary"
+                                    className="w-full pl-9 pr-3 py-1.5 bg-surface border border-outline-variant rounded text-on-surface outline-none"
                                     autoFocus
                                 />
                             </div>
@@ -99,7 +100,7 @@ export function TextInput({label, value, onChange, placeholder, error}: TextInpu
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 placeholder={placeholder}
-                className={`px-4 py-2 bg-surface border rounded-lg text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 transition-all ${
+                className={`px-4 py-2 bg-surface-container-lowest rounded-lg text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 transition-all ${
                     error ? 'border-error focus:ring-error' : 'border-outline focus:ring-primary'
                 }`}
             />
@@ -144,7 +145,7 @@ export function NumericInput({label, value, onChange, min, max, step = 1, placeh
                 min={min}
                 max={max}
                 step={step}
-                className={`px-4 py-2 bg-surface border rounded-lg text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 transition-all ${
+                className={`px-4 py-2 bg-surface-container-lowest rounded-lg text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 transition-all ${
                     error ? 'border-error focus:ring-error' : 'border-outline focus:ring-primary'
                 }`}
             />
