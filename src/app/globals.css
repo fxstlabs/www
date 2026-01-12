@@ -18,7 +18,7 @@
     --on-error: rgb(255 255 255);
     --error-container: rgb(255 218 214);
     --on-error-container: rgb(147 0 10);
-    --background: rgb(249 249 255);
+    --background: var(--color-gray-200);
     --on-background: rgb(26 27 32);
     --surface: rgb(249 249 255);
     --on-surface: rgb(26 27 32);

@@ -18,7 +18,7 @@ export function ServiceCard({
     return (
         <a
             href={href}
-            className="group relative overflow-hidden rounded-2xl bg-surface-container shadow-md shadow-shadow transition-all duration-500 hover:shadow-2xl hover:ring-outline hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl bg-surface-container transition-all duration-500 hover:ring-outline hover:-translate-y-1"
         >
             {/* Image Section */}
             <div className="relative h-56 lg:h-64 overflow-hidden">
@@ -42,7 +42,7 @@ export function ServiceCard({
 
                 {/* Arrow indicator */}
                 <div
-                    className="mt-4 flex items-center text-on-surface-variant font-medium group-hover:opacity-80 transition-opacity">
+                    className="mt-4 flex items-center text-on-surface-variant font-bold group-hover:opacity-80 transition-opacity">
                     <span>Learn more</span>
                     <svg
                         className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -82,7 +82,7 @@ export function ServicesGrid({
     const containerClass = maxWidth === 'wide' ? 'max-w-[1400px]' : 'max-w-7xl';
 
     return (
-        <section className="py-10 lg:py-12 bg-background" id="services">
+        <section className="py-10 lg:py-12" id="services">
             <div className={`mx-auto ${containerClass} px-8 lg:px-12`}>
 
                 {/* Description */}

@@ -54,7 +54,7 @@ export default function NavigationBar({
         if (scrolled) {
             return {
                 text: 'text-on-surface',
-                bg: 'bg-surface-container shadow-md shadow-shadow'
+                bg: 'bg-surface-container shadow-md'
             };
         }
 
