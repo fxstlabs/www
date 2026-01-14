@@ -3,11 +3,7 @@
 import {useEffect, useState} from "react";
 import Link from "next/link";
 import UserButton from "@/components/navigation-bar/user-button";
-
-const navItems = [
-    {name: "Services", href: "/services"},
-    {name: "Contact", href: "/contact"},
-];
+import {useTranslations} from "use-intl";
 
 interface NavigationBarProps {
     enableScrollBackground?: boolean;
@@ -18,6 +14,20 @@ export default function NavigationBar({
                                           enableScrollBackground = true,
                                           logoOnSurface = false,
                                       }: NavigationBarProps) {
+
+    const t = useTranslations("navbar")
+
+    const navItems = [
+        {
+            name: t('buttons.services'),
+            href: "/services"
+        },
+        {
+            name: t('buttons.contact'),
+            href: "/contact"
+        },
+    ];
+
     const [scrolled, setScrolled] = useState(false);
     const [hidden, setHidden] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);

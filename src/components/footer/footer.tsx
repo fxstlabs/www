@@ -1,33 +1,9 @@
+'use client'
+
 import Link from "next/link";
 import React from "react";
 import {siGithub, siInstagram} from "simple-icons";
-
-const footerColumns: ({
-    title: string;
-    items: ({ name: string; href: string })[]
-})[] = [
-    {
-        title: "About us",
-        items: [
-            {name: "Who are we?", href: "about/us"},
-            {name: "White-papers", href: "about/white-papers"},
-        ]
-    },
-    {
-        title: "Support",
-        items: [
-            {name: "Help Center", href: "support/help"},
-            {name: "Status", href: "support/status"},
-        ]
-    },
-    {
-        title: "Legal",
-        items: [
-            {name: "Privacy Policy", href: "#"},
-            {name: "Terms of Service", href: "#"},
-        ]
-    }
-];
+import {useTranslations} from "use-intl";
 
 const socialLinks = [
     {name: "Instagram", href: "https://instagram.com/fxst.tech", icon: siInstagram},
@@ -35,6 +11,33 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+    const t = useTranslations("footer");
+
+    const footerColumns: ({
+        title: string;
+        items: ({ name: string; href: string })[]
+    })[] = [
+        {
+            title: t("about-us.title"),
+            items: [
+                {name: t("about-us.who-are-we"), href: "about/us"},
+            ]
+        },
+        {
+            title: t("support.title"),
+            items: [
+                {name: t("support.help-center"), href: "support/help"},
+                {name: t("support.status"), href: "support/status"},
+            ]
+        },
+        {
+            title: t("legal.title"),
+            items: [
+                {name: t("legal.privacy-policy"), href: "legal/privacy-policy"},
+                {name: t("legal.terms-of-service"), href: "legal/terms-of-service"},
+            ]
+        }
+    ];
     return (
         <footer className="bg-surface-container text-on-surface py-12">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -65,7 +68,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     {/* CRN Text */}
                     <p className="text-sm opacity-70">
-                        &copy; {new Date().getFullYear()} FXST. All rights reserved.
+                        &copy; {new Date().getFullYear()} {t("copyright-notice")}
                     </p>
 
                     {/* Socials */}
@@ -74,7 +77,7 @@ export default function Footer() {
                             <Link key={item.name} href={item.href}
                                   className="opacity-70 hover:opacity-100 transition-opacity">
                                 <span className="sr-only">{item.name}</span>
-                                <img alt={`${item.name} logo`} height="32" width="32"
+                                <img alt={`${item.name} logo`} height={32} width={32}
                                      src={`https://cdn.simpleicons.org/${item.icon.slug}/79716b`}/>
                             </Link>
                         ))}
