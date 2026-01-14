@@ -28,9 +28,7 @@ export function ServicesDisplay() {
     return (
         <ServicesGrid
             services={services}
-            showTitleOnImage={true}
             maxWidth="wide"
-            learnMoreText={"Learn more"}
         />
     );
 }

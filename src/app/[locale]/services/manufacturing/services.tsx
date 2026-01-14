@@ -37,7 +37,6 @@ export function ManufacturingServices() {
     return (
         <ServicesGrid
             services={services}
-            showTitleOnImage={false}
             maxWidth="default"
         />
     );
