@@ -36,5 +36,17 @@ export const routing = defineRouting({
         '/services/project-management': {
             es: 'servicios/administracion-de-proyectos'
         },
+
+        '/support': {
+            es: 'ayuda'
+        },
+
+        '/support/status': {
+            es: 'ayuda/estado-del-sistema'
+        },
+
+        '/support/help': {
+            es: 'ayuda/centro-de-ayuda'
+        },
     }
 })
