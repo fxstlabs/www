@@ -7,6 +7,7 @@ import {routing} from "@/i18n/routing";
 import {notFound} from "next/dist/client/components/not-found";
 import Footer from "@/components/footer/footer";
 import NavigationBar from "@/components/navigation-bar/navigation-bar";
+import CDNDownPopup from "@/components/popups/cdn-down";
 
 export const metadata: Metadata = {
     title: "FXST",
@@ -49,6 +50,7 @@ export default async function RootLayout({
                     enableScrollBackground={true}/>
                 {children}
                 <Footer/>
+                <CDNDownPopup/>
             </Layout>
         </NextIntlClientProvider>
         </body>

@@ -64,7 +64,7 @@ export function ButtonGroup({options, value, onChange, layout = 'row', allowIcon
                     <button
                         key={option.value}
                         onClick={() => onChange(option.value)}
-                        className={`px-4 py-2 rounded-lg font-medium transition-all hover:scale-[1.02] flex items-center justify-center gap-2 duration-50 not-active:duration-250 active:scale-[0.98] ${
+                        className={`px-4 py-2 rounded-md font-medium transition-all hover:scale-[1.02] flex items-center justify-center gap-2 duration-50 not-active:duration-250 active:scale-[0.98] ${
                             isSelected
                                 ? 'shadow-md bg-primary-container text-on-primary-container'
                                 : 'hover:bg-secondary-container/50 bg-secondary-container text-on-secondary-container'
